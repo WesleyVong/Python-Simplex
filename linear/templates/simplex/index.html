@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linear Solver</title>
+</head>
+<body>
+<h1>What is linear programming?</h1>
+<p>Linear programming is used to solve<
+<h1>Linear Program Solver</h1>
+<h2>How to use</h2>
+<p>Input values into the matrix below, then press submit</p>
+<table style="width:20%">
+  <tbody>
+    <tr>
+	<th></th>
+	{% for j in Y %}
+        <th>{{j}}</th>
+        {% endfor %}
+    </tr>
+    <form action="calc" method="post">
+      {% for i in X %}
+	<tr>
+	<th>{{i}}</th>
+        {% for j in Y %}
+        <td><input name="X{{i}}Y{{j}}"></td>
+        {% endfor %}
+	</tr>
+      {% endfor %}
+      <input type="submit"/>
+    </form>
+  </tbody>
+</table>
+    <p>You can try this matrix as an example:</p>
+    <p> 1  2  2  1</p>
+    <p>-3  0  1 -1</p>
+    <p>-2 -1  0 -1</p>
+    <p>-3 -4 -5  0</p>
+    <p>
+        <a href="..">back</a>
+    </p>
+</body>
+</html>

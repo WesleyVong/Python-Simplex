@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Final matrix</h1>
+    <p>This is the matrix after all the pivot operations. However, you will notice the result on the rightmost column and the lowermost row do not match the actual results. This is because some values need to be set to 0 after the pivoting.</p>
+    {% for i in resMat %}
+    <p>{{i}}</p>
+    {% endfor %}
+    <h2>Final result</h2>
+    <p>This is the final result for each of the x and y values.</p>
+    {% for j in resVal %}
+    <p>{{j}}</p>
+    {% endfor %}
+</body>
+</html>
